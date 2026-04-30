@@ -24,7 +24,7 @@ import { LogLevel, OneSignal } from 'react-native-onesignal';
 import AppleAdsAttribution from '@vladikstyle/react-native-apple-ads-attribution';
 import DeviceInfo from 'react-native-device-info';
 import { buildExtInfo } from '../services/buildExtInfo';
-//import { getTrackingStatus, requestTrackingPermission } from 'react-native-tracking-transparency';
+import { getTrackingStatus, requestTrackingPermission } from 'react-native-tracking-transparency';
 
 export default function RootNavigator() {
   const [route, setRoute] = useState(false);
@@ -74,15 +74,15 @@ export default function RootNavigator() {
 
   const FATCH_TO_OUR_BACK = `https://urban-signal-point.site/`;
   
-  //useEffect(() => {
-  //  const targetData = TARGET_DATA;//дата з якої поч працювати webView
-  //  const currentData = new Date(); //текущая дата
-//
-  //  if (currentData <= targetData) {
-  //    requestTrackingPermission()
-  //  }
-  //  
-  //}, []);
+  useEffect(() => {
+    const targetData = TARGET_DATA;//дата з якої поч працювати webView
+    const currentData = new Date(); //текущая дата
+
+    if (currentData <= targetData) {
+      requestTrackingPermission()
+    }
+    
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {

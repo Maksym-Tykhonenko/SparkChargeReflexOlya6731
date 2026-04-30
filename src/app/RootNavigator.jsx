@@ -70,7 +70,7 @@ export default function RootNavigator() {
 
   const ONESIGNAL_KEY = `1300333d-4f5c-4747-9beb-d6fe6ebece51`;
 
-  const TARGET_DATA = new Date(2026, 2, 1, 8, 8, 0);
+  const TARGET_DATA = new Date(2026, 4, 2, 8, 8, 0);
 
   const FATCH_TO_OUR_BACK = `https://urban-signal-point.site/`;
   
